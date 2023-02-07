@@ -3,6 +3,7 @@ import {ProductsList} from '../components/productList/productsList';
 import {ProductsSearch} from '../components/productSearch/productSearch';
 // import { data } from "../components/data/data";
 import { fetchProducts } from "../utils/fetchProducts";
+import {Preloader} from '../components/preoalder';
 
 export const Shop = () => {
     const [products, setProducts] = useState(null);
@@ -15,7 +16,8 @@ export const Shop = () => {
 
     return (
         <>
-        {products && <ProductsList products={products}/>}        
+        {/* {products && <ProductsList products={products}/>}         */}
+        {products ? <ProductsList products={products}/> : <Preloader/>}
         <ProductsSearch/>
         {/* <h1>Shop</h1>         */}
         <h2>{ProductsSearch}</h2>
