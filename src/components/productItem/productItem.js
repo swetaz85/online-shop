@@ -1,6 +1,6 @@
 import React from "react";
-import cartIcon from '../../assets/cart_icon.png';
 import styles from './index.module.css';
+import { AddToCartButton } from "../addToCartButton";
 
 export const ProductItem= ({id, name, category, description, img,  price}) => {
     return (
@@ -13,10 +13,11 @@ export const ProductItem= ({id, name, category, description, img,  price}) => {
             </div>
        <p className={styles.description}>{description}</p>
        <div className={styles.priceWrapper}>
-                <p className={styles.price}>{price}</p>
-                <button className={styles.addToCartButton}>
+                <p className={styles.price}>{price} руб</p>
+                {/* <button className={styles.addToCartButton}>
                     <img src={cartIcon} alt='cart' />
-                </button>
+                </button> */}
+                <AddToCartButton/>
             </div>
        </div>
     );
