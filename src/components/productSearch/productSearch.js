@@ -1,8 +1,10 @@
 import React from "react";
-
+import styles from './index.module.css';
 
 export const ProductsSearch = () => {
     return (
-       <h1>ProductsSearch</h1>
+        
+            <input type='text' className={styles.searchInput}/>        
+        
     );
 };
